@@ -28,15 +28,12 @@ public class methods {
     }
 
     static void quickSort(int[] sortArray, int low, int high) {
-        // завершить,если массив пуст или уже нечего делить
         if (sortArray.length == 0 || low >= high)
             return;
 
-        // выбираем опорный элемент
         int middle = low + (high - low) / 2;
         int border = sortArray[middle];
 
-        // разделяем на подмассивы и меняем местами
         int i = low, j = high;
         while (i <= j) {
             while (sortArray[i] < border)
